@@ -13,10 +13,10 @@ export class UserController {
 
   @Post()
   async createUser(
-    @Body() post: createUserBody
+    @Body() body: createUserBody
   ): Promise<any> {
-    console.log('posty: ', post)
-    let user = await this.UserService.create(post);
+    console.log('posty: ', body)
+    let user = await this.UserService.create(body);
     if (user){
         console.log('user', user);
         return true;

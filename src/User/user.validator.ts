@@ -2,10 +2,6 @@ import { IsNotEmpty, IsUUID, Length, Matches, IsDefined } from 'class-validator'
 
 export class createUserBody {
 
-  @IsUUID()
-  @IsDefined()
-  id: string;
-
   @IsNotEmpty()
   @Length(5, 100)
   name: string;
@@ -15,6 +11,7 @@ export class createUserBody {
 
   avatar: string;
 
+  @IsNotEmpty()
   password: string;
 }
 
